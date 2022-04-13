@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel="stylesheet" href="/home/cedcoss/git /events_phalcon/src/app/views/index/style.css">
+		
+		<title>Compass Starter by Ariona, Rian</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body>
+		
+    <section class="vh-100" style="background-color: #4B515D;">
+   <?php  foreach($weather['forecast'] as $key=>$value){
+    //    echo "<pre>";
+    //    print_r($value);
+    //     print_r($key);
+    //    die;
+  ?> 
+  <?php ?>
+  <div class="container py-5 h-100">
+
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-8 col-lg-6 col-xl-4">
+
+        <div class="card" style="color: #4B515D; border-radius: 35px;">
+          <div class="card-body p-4">
+
+            <div class="d-flex">
+              <h6 class="flex-grow-1">Forecast of <?php echo $value[0]['date'] ?></h6>
+              <h6>15:07</h6>
+            </div>
+
+            <div class="d-flex flex-column text-center mt-5 mb-4">
+            Max Temp<h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> <?php echo $value[0]['day']['maxtemp_c'] ?> °C </h6>
+              <span class="small" style="color: #868B94">   <?php echo $value[0]['day']['condition']['text'] ?> </span>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <div class="flex-grow-1" style="font-size: 1rem;">
+                <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1">Avg Tem : <?php echo $value[0]['day']['avgtemp_c']  ?>°C  </span></div>
+                <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"><?php echo $value[0]['day']['daily_chance_of_rain'] ?> % </span></div>
+                <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> Sunrises : <?php echo $value[0]['astro']['sunrise'] ?>  </span></div>
+              </div>
+              <div>
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp" width="100px">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container py-5 h-100">
+
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-8 col-lg-6 col-xl-4">
+
+        <div class="card" style="color: #4B515D; border-radius: 35px;">
+          <div class="card-body p-4">
+
+            <div class="d-flex">
+              <h6 class="flex-grow-1">Forecast of <?php echo $value[1]['date'] ?></h6>
+              <h6>15:07</h6>
+            </div>
+
+            <div class="d-flex flex-column text-center mt-5 mb-4">
+            Max Temp<h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> <?php echo $value[1]['day']['maxtemp_c'] ?> °C </h6>
+              <span class="small" style="color: #868B94">   <?php echo $value[1]['day']['condition']['text'] ?> </span>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <div class="flex-grow-1" style="font-size: 1rem;">
+                <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1">Avg Tem : <?php echo $value[1]['day']['avgtemp_c']  ?>°C  </span></div>
+                <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"><?php echo $value[1]['day']['daily_chance_of_rain'] ?> % </span></div>
+                <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> Sunrises : <?php echo $value[1]['astro']['sunrise'] ?>  </span></div>
+              </div>
+              <div>
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp" width="100px">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container py-5 h-100">
+
+<div class="row d-flex justify-content-center align-items-center h-100">
+  <div class="col-md-8 col-lg-6 col-xl-4">
+
+    <div class="card" style="color: #4B515D; border-radius: 35px;">
+      <div class="card-body p-4">
+
+        <div class="d-flex">
+          <h6 class="flex-grow-1">Forecast of <?php echo $value[2]['date'] ?></h6>
+          <h6>15:07</h6>
+        </div>
+
+        <div class="d-flex flex-column text-center mt-5 mb-4">
+        Max Temp<h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> <?php echo $value[2]['day']['maxtemp_c'] ?> °C </h6>
+          <span class="small" style="color: #868B94">   <?php echo $value[2]['day']['condition']['text'] ?> </span>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <div class="flex-grow-1" style="font-size: 1rem;">
+            <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1">Avg Tem : <?php echo $value[2]['day']['avgtemp_c']  ?>°C  </span></div>
+            <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"><?php echo $value[2]['day']['daily_chance_of_rain'] ?> % </span></div>
+            <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> Sunrises : <?php echo $value[2]['astro']['sunrise'] ?>  </span></div>
+          </div>
+          <div>
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp" width="100px">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<?php } ?>
+  </div>
+</section>
+		
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>
+                                                        <!-- Array
+                                                        (
+                                                            [0] => Array
+                                                                (
+                                                                    [date] => 2022-04-06
+                                                                    [date_epoch] => 1649203200
+                                                                    [day] => Array
+                                                                        (
+                                                                            [maxtemp_c] => 14.6
+                                                                            [maxtemp_f] => 58.3
+                                                                            [mintemp_c] => 3.1
+                                                                            [mintemp_f] => 37.6
+                                                                            [avgtemp_c] => 7.9
+                                                                            [avgtemp_f] => 46.1
+                                                                            [maxwind_mph] => 16.1
+                                                                            [maxwind_kph] => 25.9
+                                                                            [totalprecip_mm] => 0.1
+                                                                            [totalprecip_in] => 0
+                                                                            [avgvis_km] => 10
+                                                                            [avgvis_miles] => 6
+                                                                            [avghumidity] => 71
+                                                                            [daily_will_it_rain] => 0
+                                                                            [daily_chance_of_rain] => 0
+                                                                            [daily_will_it_snow] => 0
+                                                                            [daily_chance_of_snow] => 0
+                                                                            [condition] => Array
+                                                                                (
+                                                                                    [text] => Partly cloudy
+                                                                                    [icon] => //cdn.weatherapi.com/weather/64x64/day/116.png
+                                                                                    [code] => 1003
+                                                                                )
+
+                                                                            [uv] => 5
+                                                                        )
+
+                                                                    [astro] => Array
+                                                                        (
+                                                                            [sunrise] => 06:34 AM
+                                                                            [sunset] => 07:38 PM
+                                                                            [moonrise] => 09:15 AM
+                                                                            [moonset] => 12:36 AM
+                                                                            [moon_phase] => Waxing Crescent
+                                                                            [moon_illumination] => 3 -->
+
+
+
+<!-- 
+
+Array
+(
+    [0] => Array
+        (
+            [id] => 1129182
+            [name] => Prayag
+            [region] => Uttar Pradesh
+            [country] => India
+            [lat] => 25.45
+            [lon] => 81.85
+            [url] => prayag-uttar-pradesh-india
+        )
+
+    [1] => Array
+        (
+            [id] => 1105242
+            [name] => Alla Abba Habab
+            [region] => Uttar Pradesh
+            [country] => India
+            [lat] => 25.45
+            [lon] => 81.85
+            [url] => alla-abba-habab-uttar-pradesh-india
+        ) -->

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel="stylesheet" href="/home/cedcoss/git /events_phalcon/src/app/views/index/style.css">
+		
+		<title>Compass Starter by Ariona, Rian</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body>
+  <div class="container m-5 mb-5">
+    <div class="row">
+          <div class="col-sm">
+            <form method="POST" action="/index/weather">
+              <input type="hidden" name="forecast" value="<?php echo $weather['location']['name'];?>">
+              <button type="submit" name="history"  class="btn btn-primary">Forecast</button>
+            </form>
+            
+          </div>
+          <div class="col-sm">
+            <form method="POST" action="/index/history">
+              <input type="hidden" name="forecast" value="<?php echo $weather['location']['name'];?>">
+              <button type="submit" name="history"  class="btn btn-primary">History</button>
+            </form>
+          </div>
+          <div class="col-sm">
+            <form method="POST" action="/index/astronomy">
+              <input type="hidden" name="Astronomy" value="<?php echo $weather['location']['name'];?>">
+              <button type="submit" name="history"  class="btn btn-primary">Astronomy</button>
+            </form>
+          </div>
+          <div class="col-sm">
+            <form method="POST" action="/index/timezone">
+              <input type="hidden" name="time" value="<?php echo $weather['location']['name'];?>">
+              <button type="submit" name="history"  class="btn btn-primary"> Time Zone</button>
+            </form>
+          </div>
+          <div class="col-sm">
+            <form method="POST" action="/index/sport">
+              <input type="hidden" name="sport" value="<?php echo $weather['location']['name'];?>">
+              <button type="submit" name="history"  class="btn btn-primary">Sports</button>
+            </form>
+          </div>
+          <div class="col-sm">
+            <form method="POST" action="/index/air">
+              <input type="hidden" name="city" value="<?php echo $weather['location']['name'];?>">
+              <button type="submit" name="history"  class="btn btn-primary">Air Quality</button>
+            </form>
+          </div>
+          <div class="col-sm">
+            <form method="POST" action="/index/alert">
+              <input type="hidden" name="alert" value="<?php echo $weather['location']['name'];?>">
+              <button type="submit" name="history"  class="btn btn-primary">Weather Alert</button>
+            </form>
+          </div>
+    </div>
+
+  </div>
+  
+    <section class="vh-100" style="background-color: #4B515D;">
+    <div class="card" style="color: #4B515D; border-radius: 35px;">
+              <div class="card-body p-4">
+
+                <div class="d-flex">
+                  <h6 class="flex-grow-1"><?php echo $weather['location']['name']; ?></h6>
+                  <h6>15:07</h6>
+                </div>
+
+                <div class="d-flex flex-column text-center mt-5 mb-4">
+                  <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"><?php echo $weather['current']['temp_c']; ?> </h6>
+                  <span class="small" style="color: #868B94"><?php echo $weather['current']['condition']['text']; ?></span>
+                </div>
+
+                <div class="d-flex align-items-center">
+                  <div class="flex-grow-1" style="font-size: 1rem;">
+                    <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"><?php echo $weather['current']['last_updated']; ?>  </span></div>
+                    <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"><?php echo $weather['current']['wind_kph']; ?>km/hr  </span></div>
+                    <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"><?php echo $weather['current']['cloud']; ?></span></div>
+                    <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 0.2h </span></div>
+                  </div>
+                  <div>
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp" width="100px">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+</section>
+
+		
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>
+http://api.weatherapi.com/v1/current.json?key= 0bab7dd1bacc418689b143833220304&q=London&aqi=no

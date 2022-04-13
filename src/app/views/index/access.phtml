@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel="stylesheet" href="/home/cedcoss/git /events_phalcon/src/app/views/index/style.css">
+<style>
+  body{
+    /* background-image:url("https://i.gifer.com/1KLD.gif");
+    background-repeat: repeat; */
+
+  }
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light p-5 ">
+  <h3 class="text-center"> check Weather of Your City</h3>
+  <!--<a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="order">Checkout</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/setting">Setting</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">checkout</a>
+          <a class="dropdown-item" href="#"></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="addpro">Add Product</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="role">Add Role</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="role/action">Action</a>
+      </li>
+    </ul>
+   </div> -->
+</nav>
+<section class="section-products">
+		<div class="container">
+				<div class="row justify-content-center text-center">
+						<div class="col-md-8 col-lg-6">
+								<div class="header mt-5">
+										<h3>Featured Product</h3>
+										<h2>Popular Products</h2>
+								</div>
+
+                    <nav class="navbar navbar-light bg-light">
+                        <form class="form-inline" method="POST" action="/index/search">
+                            <span>
+                                <div class="row">
+                                    <input class="form-control mr-sm-2 col-sm" name="song" type="text"  placeholder="Search" aria-label="Search" >
+                                    <input value="artist" name="type" type="checkbox" >artist
+                                    <input value="playlist" name="type" type="checkbox" >playlist
+                                    <input value="track" name="type" type="checkbox" >track
+                                    <input value="show" name="type" type="checkbox" >show
+                                    <input value="episode" name="type" type="checkbox" />episode
+                                    <!-- <form method ="POST" action="index/search"> -->
+                                        <button class="btn btn-outline-success my-2 my-sm-0 col-sm m-5" name="submit" type="submit">Search</button>
+                                <!-- </form>   -->
+                                    <!-- <input value="check" name="type" type="checkbox" > -->
+                                    <!-- "album" -->
+                                </div>
+                                <!-- <input class="form-control mr-sm-2 col-sm" name="val" type="text" value="<?php echo $token['access_token'] ?>" placeholder="Search" aria-label="Search" disabled> -->
+                            <span>
+
+                        </form>
+                        
+                    </nav>
+                
+				</div>
+				</div>
+				</div>
+
+ 
+</section>
+<!-- partial -->
+  
+</body>
+</html>
